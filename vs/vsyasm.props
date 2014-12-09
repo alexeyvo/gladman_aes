@@ -12,13 +12,19 @@
   <PropertyGroup>
     <YasmPath Condition= "'$(YASMPATH)' == ''">$(VCInstallDir)bin\</YasmPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'Win32' ">
+    <Platform_fixed>win32</Platform_fixed>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' != 'Win32' ">
+    <Platform_fixed>$(Platform)</Platform_fixed>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <YASM>
       <Debug>False</Debug>
       <ObjectFile>$(IntDir)</ObjectFile>
       <PreProc>0</PreProc>
       <Parser>0</Parser>
-      <CommandLineTemplate>"$(YasmPath)"vsyasm.exe -Xvc -f $(Platform) [AllOptions] [AdditionalOptions] [Inputs]</CommandLineTemplate>
+      <CommandLineTemplate>"$(YasmPath)"vsyasm.exe -Xvc -f $(Platform_fixed) [AllOptions] [AdditionalOptions] [Inputs]</CommandLineTemplate>
       <Outputs>%(ObjectFile)</Outputs>
       <ExecutionDescription>Assembling %(Filename)%(Extension)</ExecutionDescription>
       <ShowOnlyRuleProperties>false</ShowOnlyRuleProperties>
