@@ -11,15 +11,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\aesxam.c">
+    <ClCompile Include="..\..\src\aesxam.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\aes.h">
+    <ClInclude Include="..\rdtsc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\rdtsc.h">
+    <ClInclude Include="..\..\src\aes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

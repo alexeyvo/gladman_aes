@@ -19,19 +19,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\aes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\aesaux.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\aescpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\aestst.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\brg_types.h">
+    <ClInclude Include="..\..\src\brg_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aescpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

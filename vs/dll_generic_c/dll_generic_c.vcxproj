@@ -28,25 +28,25 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -78,6 +78,10 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)dll\$(Platform)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src;C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src;C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\src;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\src;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -210,21 +214,21 @@ copy "$(TargetDir)$(TargetName).pdb" "$(TargetDir)aes.pdb"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\aescrypt.c" />
+    <ClCompile Include="..\..\src\aeskey.c" />
+    <ClCompile Include="..\..\src\aestab.c" />
+    <ClCompile Include="..\..\src\aes_modes.c" />
+    <ClCompile Include="..\..\src\aes_ni.c" />
     <ClCompile Include="..\aes_dll_main.c" />
-    <ClCompile Include="..\aes_modes.c" />
-    <ClCompile Include="..\aescrypt.c" />
-    <ClCompile Include="..\aeskey.c" />
-    <ClCompile Include="..\aestab.c" />
-    <ClCompile Include="..\aes_ni.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\aes.h" />
-    <ClInclude Include="..\aes_ni.h" />
-    <ClInclude Include="..\aes_via_ace.h" />
-    <ClInclude Include="..\aesopt.h" />
-    <ClInclude Include="..\aestab.h" />
-    <ClInclude Include="..\brg_endian.h" />
-    <ClInclude Include="..\brg_types.h" />
+    <ClInclude Include="..\..\src\aes.h" />
+    <ClInclude Include="..\..\src\aesopt.h" />
+    <ClInclude Include="..\..\src\aestab.h" />
+    <ClInclude Include="..\..\src\aes_ni.h" />
+    <ClInclude Include="..\..\src\aes_via_ace.h" />
+    <ClInclude Include="..\..\src\brg_endian.h" />
+    <ClInclude Include="..\..\src\brg_types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

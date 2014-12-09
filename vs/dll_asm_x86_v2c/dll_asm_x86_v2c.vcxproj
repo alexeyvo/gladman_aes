@@ -20,13 +20,13 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -49,6 +49,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">aes_$(ProjectName)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">aes_$(ProjectName)</TargetName>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src;C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src;C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <YASM>
@@ -121,21 +123,23 @@ copy "$(TargetDir)$(TargetName).pdb" "$(TargetDir)aes.pdb"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\aeskey.c" />
+    <ClCompile Include="..\..\src\aestab.c" />
+    <ClCompile Include="..\..\src\aes_modes.c" />
     <ClCompile Include="..\aes_dll_main.c" />
-    <ClCompile Include="..\aes_modes.c" />
-    <ClCompile Include="..\aeskey.c" />
-    <ClCompile Include="..\aestab.c" />
   </ItemGroup>
   <ItemGroup>
-    <YASM Include="..\aes_x86_v2.asm" />
+    <ClInclude Include="..\..\src\aes.h" />
+    <ClInclude Include="..\..\src\aesopt.h" />
+    <ClInclude Include="..\..\src\aestab.h" />
+    <ClInclude Include="..\..\src\aes_via_ace.h" />
+    <ClInclude Include="..\..\src\brg_endian.h" />
+    <ClInclude Include="..\..\src\brg_types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\aes.h" />
-    <ClInclude Include="..\aes_via_ace.h" />
-    <ClInclude Include="..\aesopt.h" />
-    <ClInclude Include="..\aestab.h" />
-    <ClInclude Include="..\brg_endian.h" />
-    <ClInclude Include="..\brg_types.h" />
+    <YASM Include="..\..\src\aes_x86_v2.asm">
+      <FileType>Document</FileType>
+    </YASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

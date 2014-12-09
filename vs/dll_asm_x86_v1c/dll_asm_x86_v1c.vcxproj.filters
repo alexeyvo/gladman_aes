@@ -11,42 +11,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\aeskey.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\aestab.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\aes_dll_main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\aes_modes.c">
+    <ClCompile Include="..\..\src\aes_modes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aestab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aeskey.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <YASM Include="..\aes_x86_v1.asm">
-      <Filter>Source Files</Filter>
-    </YASM>
+    <ClInclude Include="..\..\src\brg_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aes_via_ace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aesopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aestab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\brg_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\aes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\aesopt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\aestab.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\aes_via_ace.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\brg_endian.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\brg_types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <YASM Include="..\..\src\aes_x86_v1.asm">
+      <Filter>Source Files</Filter>
+    </YASM>
   </ItemGroup>
 </Project>

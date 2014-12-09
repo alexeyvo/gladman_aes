@@ -11,39 +11,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\aeskey.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\aestab.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\aes_modes.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <YASM Include="..\aes_x86_v2.asm">
+    <YASM Include="..\..\src\aes_x86_v2.asm">
       <Filter>Source Files</Filter>
     </YASM>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\aes.h">
+    <ClInclude Include="..\..\src\brg_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\aesopt.h">
+    <ClInclude Include="..\..\src\aes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\aestab.h">
+    <ClInclude Include="..\..\src\aes_via_ace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\aes_via_ace.h">
+    <ClInclude Include="..\..\src\aesopt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\brg_endian.h">
+    <ClInclude Include="..\..\src\aestab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\brg_types.h">
+    <ClInclude Include="..\..\src\brg_endian.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\aeskey.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aestab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aes_modes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
